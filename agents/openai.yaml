@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make It Lean · 自主推进与持续整理"
+  short_description: "适用于软件、复现、实验与文档项目，自主补足问题，承接既有成果，持续整理并完整交付"
+  default_prompt: "使用 $make-it-lean，承接已有成果并沿既定目标与路线推进，自主补足问题、判断文件价值，完成产出、验证、清理和已授权的同步，交付实际结果。"
