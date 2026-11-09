@@ -18,7 +18,9 @@
 
 ## 安装
 
-将仓库克隆到个人技能目录。若已有同名安装，先核对差异并更新原目录，保持一个权威版本。
+将仓库克隆到所用 agent 的个人技能目录。若已有同名安装，先核对差异并更新原目录，保持一个权威版本。
+
+### Codex
 
 Windows PowerShell：
 
@@ -35,7 +37,28 @@ mkdir -p ~/.agents/skills
 git clone https://github.com/indulge-gif/make-it-lean.git ~/.agents/skills/make-it-lean
 ```
 
-团队也可将技能文件放入项目的 `.agents/skills/make-it-lean/`。其他 agent 工具可按其技能目录约定安装，或读取 [SKILL.md](SKILL.md)。
+### Claude Code
+
+Windows PowerShell：
+
+```powershell
+$leanSkillsRoot = Join-Path $env:USERPROFILE '.claude\skills'
+New-Item -ItemType Directory -Path $leanSkillsRoot -Force | Out-Null
+git clone https://github.com/indulge-gif/make-it-lean.git (Join-Path $leanSkillsRoot 'make-it-lean')
+```
+
+macOS / Linux：
+
+```bash
+mkdir -p ~/.claude/skills
+git clone https://github.com/indulge-gif/make-it-lean.git ~/.claude/skills/make-it-lean
+```
+
+Claude Code 只读取 SKILL.md 与 references，`agents/openai.yaml` 不影响使用。
+
+### 项目共享与其他工具
+
+团队也可将技能文件放入项目的技能目录：Codex 为 `.agents/skills/make-it-lean/`，Claude Code 为 `.claude/skills/make-it-lean/`。其他 agent 工具可按其技能目录约定安装，或读取 [SKILL.md](SKILL.md)。
 
 ## 使用
 
@@ -43,6 +66,12 @@ git clone https://github.com/indulge-gif/make-it-lean.git ~/.agents/skills/make-
 
 ```text
 使用 $make-it-lean，承接本项目已有成果，沿既定目标和路线完成〔任务〕。
+```
+
+Claude Code 中用斜杠调用，任务描述跟在后面：
+
+```text
+/make-it-lean 承接本项目已有成果，沿既定目标和路线完成〔任务〕。
 ```
 
 支持新项目建立约定、现有项目精简和持续开发。具体操作沿用用户授权与目标项目约定。
