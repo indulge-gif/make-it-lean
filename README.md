@@ -54,7 +54,7 @@ mkdir -p ~/.claude/skills
 git clone https://github.com/indulge-gif/make-it-lean.git ~/.claude/skills/make-it-lean
 ```
 
-Claude Code 只读取 SKILL.md 与 references，`agents/openai.yaml` 不影响使用。
+Claude Code 使用 SKILL.md，并按需读取其中引用的辅助文件；`agents/openai.yaml` 是 Codex 的界面元数据，不影响 Claude Code 使用。
 
 ### 项目共享与其他工具
 
