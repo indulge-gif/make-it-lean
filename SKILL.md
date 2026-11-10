@@ -1,6 +1,7 @@
 ---
 name: make-it-lean
 description: Establish project working conventions, streamline existing project assets, or apply those conventions through ongoing implementation and artifact delivery. Use when asked to improve autonomous execution, artifact lifecycle, documentation organization, or Git handoffs.
+license: MIT
 ---
 
 # Make It Lean

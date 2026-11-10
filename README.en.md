@@ -88,3 +88,7 @@ Use it to establish conventions for a new project, streamline an existing projec
 - [Build and reuse guide](docs/构建与复用说明.md): structure, design, installation, maintenance, and recorded example checks.
 
 `agents/openai.yaml` supplies Codex interface metadata. The skill itself does not require runtime scripts, an MCP connection, or an API key; the agent needs the tools required by the actual task.
+
+## License
+
+Licensed under the [MIT License](LICENSE).

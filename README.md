@@ -86,3 +86,7 @@ Claude Code 中用斜杠调用，任务描述跟在后面：
 - [构建与复用说明](docs/构建与复用说明.md)：完整结构、设计、安装、维护和样例验证记录。
 
 `agents/openai.yaml` 提供 Codex 界面元数据。本技能不依赖运行脚本、MCP 或 API key。
+
+## 许可证
+
+本项目采用 [MIT 许可证](LICENSE)。
